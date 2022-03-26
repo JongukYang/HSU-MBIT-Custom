@@ -108,10 +108,8 @@
                 <img class = "insta" src = "image/insta.png">
                 <img class = "kakao" src = "image/kakao.png">
                 <img class = "linkcopy" src = "image/linkcopy.png">
-                <a id="kakao-link-btn" class="kakao" href="javascript:sendLink();">
-                    <img src="image/kakao.png" />
-                </a>
                 <script type="text/javascript">
+                    Kakao.init('4da6b782b75e71782665fd87e3e8ebf9');
                     function sendLink() {
                       Kakao.Link.sendDefault({
                         objectType: 'feed',
@@ -149,6 +147,10 @@
                       })
                     }
                   </script>
+                <a id="kakao-link-btn" class="kakao" href="javascript:sendLink();">
+                    <img src="image/kakao.png" />
+                </a>
+                
             </div>
         </article>
         <footer class = "copyright">
