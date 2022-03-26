@@ -6,159 +6,173 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dis/web/static/pretendard-dynamic-subset.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dis/web/static/pretendard-dynamic-subset.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 
-<body class="desktop" onload = "init()">
-    <div class = "wrapper1">
-        <div class = "wrapper2">
-    <article class="start">
-        <div class="hsu-logo-box" ><img src="image/hsu_logo.png" class = "hsu-logo-image"></div>
-        <div class="title1">나와 닮은</div>
-        <div class="title2">
-            상상부기 프렌즈<span class="text-style-1">는?</span>
+<body class="desktop" onload="init()">
+    <div class="wrapper1">
+        <div class="wrapper2">
+            <article class="start">
+                <div class="hsu-logo-box"><img src="image/hsu_logo.png" class="hsu-logo-image"></div>
+                <div class="title1">나와 닮은</div>
+                <div class="title2">
+                    상상부기 프렌즈<span class="text-style-1">는?</span>
+                </div>
+                <div class="subtitle1">
+                    #상상부기 #한성냥이 #꼬꼬꾸꾸 # 상찌
+                </div>
+                <div class="start-image-box"><img src="image/start_img.png" class="start-img"></div>
+                <div class="detail">
+                    <span class="text-style-1">한성대학교 멋쟁이사자처럼 10기</span>
+                    운영진들과<br>
+                    기획/디자인팀이 제작한 유형테스트 입니다.<br>
+                    많은 참여와 공유 부탁드립니다!
+                </div>
+
+                <div class="button-box"><button type="button" class="first_button" onclick='start();'>
+                        <div class="text">테스트 시작하기</div>
+                    </button><br></div>
+
+            </article>
         </div>
-        <div class="subtitle1">
-            #상상부기 #한성냥이 #꼬꼬꾸꾸 # 상찌
+
+        <div class="wrapper2">
+            <article class="question">
+                <div class="title1">나와 닮은</div>
+                <div class="title2">상상부기 프렌즈는?</div>
+                <div class="progress-number">1/20</div>
+
+                <div id="myProgress">
+                    <div id="myBar"></div>
+                    <div class="progress-bar-image"></div>
+                </div>
+
+                <div class="problem">문제</div>
+
+                <input id="type" type="hidden" value="EI">
+
+                <button id="A" type="button" class="answer-button"><span class="answer-content">content</span></button>
+                <button id="B" type="button" class="answer-button"><span class="answer-content">content</span></button>
+            </article>
         </div>
-        <div class = "start-image-box"><img src="image/start_img.png" class="start-img"></div>
-        <div class="detail">
-            <span class="text-style-1">한성대학교 멋쟁이사자처럼 10기</span>
-            운영진들과<br>
-            기획/디자인팀이 제작한 유형테스트 입니다.<br>
-            많은 참여와 공유 부탁드립니다!
+
+
+        <div class="wrapper2">
+            <article class="result">
+                <div class="result-subtitle">캐릭터 설명</div>
+
+                <div class="result-title">title
+                    <span style="color:#124098" class="highlight1">캐릭터 이름</span>
+                </div>
+                <div class="result-mbti-image-box">
+                    <img src="" id="result-mbti-image">
+                </div>
+
+
+                <div class="result-mbti">#INFP</div>
+                <div class="result-detail">&lt; 특징 &gt;</div>
+                <div class="result-detail-content">사교적이고, 타인의 의견을 존중 뭐시기</div>
+
+                <div class="favorite">&lt; 나는 이게 <span style="color :#124098">좋아</span>! &gt;</div>
+                <div class="favorite-content">정성스러운 칭찬</div>
+                <div class="dislike">&lt; 나는 이게 <span style="color :#b53c3c">싫어</span>.. &gt;</div>
+                <div class="dislike-content">잔인한것 ~~~</div>
+
+                <table class="mbti-best-worst-wrapper">
+                    <tr style="height : 28px;">
+                        <td>
+                            <div class="mbti-best-worst"><span style="color: #124098;">최고</span>의 궁합</div>
+                        </td>
+                        <td>
+                            <div class="mbti-best-worst"><span style="color: #b53c3c;">최악</span>의 궁합</div>
+                        </td>
+                    </tr>
+
+                    <tr style="height : 40px; padding-top : 13px;">
+                        <td>
+                            <div class="mbti-best-worst-detail" id="mbti-best-detail">긍정파워 뭐시기</div>
+                        </td>
+                        <td>
+                            <div class="mbti-best-worst-detail" id="mbti-worst-detail">긍정파워 뭐시기</div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td style="width : 154px; height : 123px"><img id="mbti-best-image"
+                                class="mbti-best-worst-image" src=""></td>
+                        <td style="width : 154px; height : 123px"><img id="mbti-worst-image"
+                                class="mbti-best-worst-image" src=""></td>
+                    </tr>
+
+                </table>
+
+
+            </article>
         </div>
+        <div class="wrapper2">
+            <article class="share-menu">
+                <div class="share_text">
+                    공유하기
+                </div>
+                <div class="share-image-box">
+                    <img class="insta" src="image/insta.png">
+                    <img class="kakao" src="image/kakao.png">
+                    <img class="linkcopy" src="image/linkcopy.png">
+                    <script type="text/javascript">
+                        Kakao.init('4da6b782b75e71782665fd87e3e8ebf9');
+                        function sendLink() {
+                            Kakao.Link.sendDefault({
+                                objectType: 'feed',
+                                content: {
+                                    title: '딸기 치즈 케익',
+                                    description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+                                    imageUrl:
+                                        'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                                    link: {
+                                        mobileWebUrl: 'https://developers.kakao.com',
+                                        webUrl: 'https://developers.kakao.com',
+                                    },
+                                },
+                                social: {
+                                    likeCount: 286,
+                                    commentCount: 45,
+                                    sharedCount: 845,
+                                },
+                                buttons: [
+                                    {
+                                        title: '웹으로 보기',
+                                        link: {
+                                            mobileWebUrl: 'https://developers.kakao.com',
+                                            webUrl: 'https://developers.kakao.com',
+                                        },
+                                    },
+                                    {
+                                        title: '앱으로 보기',
+                                        link: {
+                                            mobileWebUrl: 'https://developers.kakao.com',
+                                            webUrl: 'https://developers.kakao.com',
+                                        },
+                                    },
+                                ],
+                            })
+                        }
+                    </script>
+                    <a id="kakao-link-btn" class="kakao" href="javascript:sendLink();">
+                        <img src="image/kakao.png" />
+                    </a>
 
-        <div class ="button-box"><button type="button" class="first_button" onclick='start();'><div class="text">테스트 시작하기</div></button><br></div>
-        
-        </article>
-    </div>
-
-    <div class = "wrapper2">
-    <article class="question">
-        <div class = "title1">나와 닮은</div>
-        <div class = "title2">상상부기 프렌즈는?</div>
-        <div class = "progress-number">1/20</div>
-
-        <div id="myProgress">
-            <div id="myBar"></div>
-            <div class = "progress-bar-image"></div>
-          </div>
-
-        <div class="problem">문제</div>
-
-        <input id="type" type="hidden" value="EI">
-
-        <button id="A" type="button" class="answer-button"><span class = "answer-content">content</span></button>
-        <button id="B" type="button" class="answer-button"><span class = "answer-content">content</span></button>
-    </article>
-    </div>
-
-
-    <div class = "wrapper2">
-    <article class="result">
-        <div class = "result-subtitle">캐릭터 설명</div>
-        
-        <div class = "result-title">title
-            <span style = "color:#124098" class = "highlight1">캐릭터 이름</span>
+                </div>
+            </article>
+            <footer class="copyright">
+                <img class="copyright-logo" src="image/copyright_logo.png">
         </div>
-        <div class = "result-mbti-image-box">
-            <img src = "" id = "result-mbti-image">
-        </div>
-        
-        
-        <div class = "result-mbti">#INFP</div>
-        <div class = "result-detail">&lt; 특징 &gt;</div>
-        <div class = "result-detail-content">사교적이고, 타인의 의견을 존중 뭐시기</div>
-        
-        <div class = "favorite">&lt; 나는 이게 <span style="color :#124098">좋아</span>! &gt;</div>
-        <div class = "favorite-content">정성스러운 칭찬</div>
-        <div class = "dislike">&lt; 나는 이게 <span style="color :#b53c3c">싫어</span>.. &gt;</div>
-        <div class = "dislike-content">잔인한것 ~~~</div>
-        
-        <table class = "mbti-best-worst-wrapper">
-            <tr style = "height : 28px;">
-                <td><div class = "mbti-best-worst"><span style ="color: #124098;">최고</span>의 궁합</div></td>
-                <td><div class = "mbti-best-worst"><span style ="color: #b53c3c;">최악</span>의 궁합</div></td>
-            </tr>
-            
-            <tr style = "height : 40px; padding-top : 13px;">
-                <td><div class = "mbti-best-worst-detail" id = "mbti-best-detail">긍정파워 뭐시기</div></td>
-                <td><div class = "mbti-best-worst-detail" id = "mbti-worst-detail">긍정파워 뭐시기</div></td>
-            </tr>
-            
-            <tr>
-                <td style="width : 154px; height : 123px"><img id="mbti-best-image" class = "mbti-best-worst-image" src=""  ></td>
-                <td style="width : 154px; height : 123px"><img id="mbti-worst-image" class = "mbti-best-worst-image" src="" ></td>
-            </tr>
-
-        </table>
-        
-
-    </article>
-</div>
-    <div class="wrapper2">
-        <article class = "share-menu">
-            <div class = "share_text">
-                공유하기
-            </div>
-            <div class = "share-image-box">
-                <img class = "insta" src = "image/insta.png">
-                <img class = "kakao" src = "image/kakao.png">
-                <img class = "linkcopy" src = "image/linkcopy.png">
-                <script type="text/javascript">
-                    Kakao.init('4da6b782b75e71782665fd87e3e8ebf9');
-                    function sendLink() {
-                      Kakao.Link.sendDefault({
-                        objectType: 'feed',
-                        content: {
-                          title: '딸기 치즈 케익',
-                          description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-                          imageUrl:
-                            'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
-                          link: {
-                            mobileWebUrl: 'https://developers.kakao.com',
-                            webUrl: 'https://developers.kakao.com',
-                          },
-                        },
-                        social: {
-                          likeCount: 286,
-                          commentCount: 45,
-                          sharedCount: 845,
-                        },
-                        buttons: [
-                          {
-                            title: '웹으로 보기',
-                            link: {
-                              mobileWebUrl: 'https://developers.kakao.com',
-                              webUrl: 'https://developers.kakao.com',
-                            },
-                          },
-                          {
-                            title: '앱으로 보기',
-                            link: {
-                              mobileWebUrl: 'https://developers.kakao.com',
-                              webUrl: 'https://developers.kakao.com',
-                            },
-                          },
-                        ],
-                      })
-                    }
-                  </script>
-                <a id="kakao-link-btn" class="kakao" href="javascript:sendLink();">
-                    <img src="image/kakao.png" />
-                </a>
-                
-            </div>
-        </article>
-        <footer class = "copyright">
-            <img class = "copyright-logo" src = "image/copyright_logo.png"></div>
         </footer>
     </div>
 
-</div>
+    </div>
     <input type="hidden" type="text" id="EI" value="0">
     <input type="hidden" type="text" id="SN" value="0">
     <input type="hidden" type="text" id="TF" value="0">
@@ -176,13 +190,13 @@
         var num = 1; //몇 번 문제
 
         var q = {
-            1: {"tilte": "친구를 만나러 나가려던 참에 급한일이 생겨 못만날 것 같다고 연락이 왔다. 당신의 반응은?", "type": "EI", "A": "딴 애들 연락 돌려봐야겠다", "B": "오히려 좋아 밀린 드라마 정주행해야지"},
-            2: {"title": "팀플을 같이하게 된 친구들과 친해지려 상상파크에 갔다. 이때 당신은? ", "type": "EI", "A": "새로운 대화의 주제를 꺼내면서 열심히 질문한다.", "B": "친구들의 질문에 열심히 대답한다."},
-            3: {"title": "동기들과 학교 앞 방목 1호점에 고기를 먹으러왔다! 이때 당신은?", "type": "EI", "A": "사장님~ 저희 삼겹 목살 반반이요!", "B": "친구가 대신 주문한다."},
-            4: {"title": "같이 밥을 먹기로 한 친구들의 수업이 늦게 끝나게 되어 혼자 밥을 먹게 되었다.", "type": "EI", "A": "혼밥은 역시 학식당이지. 소금구이 덮밥 있으면 좋겠당ㅎㅎ", "B": "좀만 참았다가 집가서 먹어야겠다!"},
-            5: {"title": "수업 내용이 너무 어려워 우울해진 당신.", "type": "EI", "A": "친구들에게 말한다. \"오늘 너무 힘들다.. 와글즈.. 고?\"", "B": "친구들에게 말한다. \"얘들아 나 너무 기빨려.. 빨리 집가서 좀 쉬어야겠다..\" "},
+            1: { "tilte": "친구를 만나러 나가려던 참에 급한일이 생겨 못만날 것 같다고 연락이 왔다. 당신의 반응은?", "type": "EI", "A": "딴 애들 연락 돌려봐야겠다", "B": "오히려 좋아 밀린 드라마 정주행해야지" },
+            2: { "title": "팀플을 같이하게 된 친구들과 친해지려 상상파크에 갔다. 이때 당신은? ", "type": "EI", "A": "새로운 대화의 주제를 꺼내면서 열심히 질문한다.", "B": "친구들의 질문에 열심히 대답한다." },
+            3: { "title": "동기들과 학교 앞 방목 1호점에 고기를 먹으러왔다! 이때 당신은?", "type": "EI", "A": "사장님~ 저희 삼겹 목살 반반이요!", "B": "친구가 대신 주문한다." },
+            4: { "title": "같이 밥을 먹기로 한 친구들의 수업이 늦게 끝나게 되어 혼자 밥을 먹게 되었다.", "type": "EI", "A": "혼밥은 역시 학식당이지. 소금구이 덮밥 있으면 좋겠당ㅎㅎ", "B": "좀만 참았다가 집가서 먹어야겠다!" },
+            5: { "title": "수업 내용이 너무 어려워 우울해진 당신.", "type": "EI", "A": "친구들에게 말한다. \"오늘 너무 힘들다.. 와글즈.. 고?\"", "B": "친구들에게 말한다. \"얘들아 나 너무 기빨려.. 빨리 집가서 좀 쉬어야겠다..\" " },
             6: { "title": "오랜만에 대면수업을 하러 학교에 왔다! 어, 공학관이 어디더라?", "type": "SN", "A": "공학관 갈 때마다 숨이 찼던 기억이.. 저 언덕 위에 있을듯!", "B": "뭐 학교도 오랜만에 온김에 산책이나 할겸 다 둘러보면서 찾아야겠다~!" },
-            7: { "title": "CC인 연인과 상상관 12층에서 노을을 보기로 했는데, 지하철을 반대로 타 늦는다고 한다. 이때 당신은? ", "type": "SN", "A": "음 그럴 수 있지 밤 야경도 좋아", "B":  " 아니 어떻게 그럴수가 있지..? 좀 더 신경 썼으면 이럴 일 없었을텐데.." },
+            7: { "title": "CC인 연인과 상상관 12층에서 노을을 보기로 했는데, 지하철을 반대로 타 늦는다고 한다. 이때 당신은? ", "type": "SN", "A": "음 그럴 수 있지 밤 야경도 좋아", "B": " 아니 어떻게 그럴수가 있지..? 좀 더 신경 썼으면 이럴 일 없었을텐데.." },
             8: { "title": "한성대에 들어온 당신 ! 한성대 마스코트인 상상부기가 반겨주고 있다 이때 당신이 드는 생각은 ?", "type": "SN", "A": "귀엽다, 거북이다, 동그랗다, 파랗다, 누가 만들었지, 성별이 뭐지", "B": "이름이 왜 상상부기지?, 뽀로로랑 친할 것 같다, 아 거북이랑 펭귄이랑은 안친해지나?" },
             9: { "title": "상상빌리지에 살고있는 당신! 오늘은 B1 조리실에 가서 떡볶이 만들기에 도전해볼것이다!", "type": "SN", "A": "백종원님의 떡볶이 레시피 검색! 아 근데 재료가 하나 없네.. 담에 만들어야겠다.. ", "B": "저번에 백종원님 티비 프로에서 어떻게 하는지 다 봐놨지!! 음 설탕이 없네 대신 꿀 넣어야겠당" },
             10: { "title": "친구들과 유형테스트 만들기 프로젝트를 하려고 한다. 오늘은 첫 회의 시간. 뭐부터 정해야하지 ?", "type": "SN", "A": "지금 눈 앞에 있는 세세한 것들부터 정할래 !", "B": "세세한 것 보다는 큰 틀을 먼저 잡자 !" },
@@ -220,7 +234,7 @@
         }
 
 
-        function init(){
+        function init() {
             $(".start").show();
             $(".question").hide();
             $(".copyright").hide();
@@ -266,7 +280,7 @@
                 best_conn = "ENTP"
                 worst_conn = "ISFP"
             }
-            
+
             else if (mbti == "ENFJ") {
                 best_conn = "INFJ"
                 worst_conn = "ISTJ"
@@ -333,7 +347,7 @@
                 ($("#SN").val() < 2) ? mbti += "N" : mbti += "S";
                 ($("#TF").val() < 2) ? mbti += "F" : mbti += "T";
                 ($("#JP").val() < 2) ? mbti += "P" : mbti += "J";
-               
+
 
                 best_worst(mbti);
 
@@ -353,9 +367,9 @@
                 $("#worst-match").html(result[worst_conn]["name"]);
                 $("#mbti-best-detail").html(result[best_conn]["title"] + "<br/>" + result[best_conn]["char"]);
                 $("#mbti-worst-detail").html(result[worst_conn]["title"] + "<br/>" + result[worst_conn]["char"]);
-                
+
                 // 아래 좋은거 나쁜거 사진 눌렀을 때 변환
-                $("#mbti-best-image").click(function(e){
+                $("#mbti-best-image").click(function (e) {
                     var convert_mbti = best_conn;
 
                     $(".result-subtitle").html(result[convert_mbti]["subtitle"]); // 서브
@@ -364,7 +378,7 @@
                     $("#explain").html(result[convert_mbti]["explain"]); // 설명
                     $(".result-mbti").html("#" + result[convert_mbti]["name"]);
 
-                    
+
                     best_worst(convert_mbti);
 
                     $("#mbti-best-image").attr("src", result[best_conn]["img"]);
@@ -375,7 +389,7 @@
                     $("#mbti-worst-detail").html(result[worst_conn]["title"] + "<br/>" + result[worst_conn]["char"]);
                 })
 
-                $("#mbti-worst-image").click(function(e){
+                $("#mbti-worst-image").click(function (e) {
                     var convert_mbti = worst_conn;
 
                     $(".result-subtitle").html(result[convert_mbti]["subtitle"]); // 서브
@@ -384,7 +398,7 @@
                     $("#explain").html(result[convert_mbti]["explain"]); // 설명
                     $(".result-mbti").html("#" + result[convert_mbti]["name"]);
 
-                    
+
                     best_worst(convert_mbti);
 
                     $("#mbti-best-image").attr("src", result[best_conn]["img"]);
@@ -397,9 +411,9 @@
             }
             else {
                 var random = Math.floor(Math.random() * (index.length - 1) + 1);
-                $("#myBar").attr('style', 'width: calc(100/20*'+num+'%)');
+                $("#myBar").attr('style', 'width: calc(100/20*' + num + '%)');
                 $('.progress-bar-image').attr('style', 'margin: 0px 0% 0px calc(100/20 *' + num + '%)')
-                $(".progress-number").html(num +"/20");
+                $(".progress-number").html(num + "/20");
                 $(".problem").html(q[index[random]]["title"]); //문제 1번, 2번 3번 ...
                 $("#type").val(q[index[random]]["type"]); // EI EI EI SN SN SN TF TF TF ...
                 $("#A").html(q[index[random]]["A"]);
@@ -409,7 +423,7 @@
             }
         }
 
-       
+
 
 
     </script>
