@@ -108,40 +108,47 @@
                 <img class = "insta" src = "image/insta.png">
                 <img class = "kakao" src = "image/kakao.png">
                 <img class = "linkcopy" src = "image/linkcopy.png">
-                <a id="kakao-link-btn" class="kakao" href="javascript:sendLink()">
+                <a id="kakao-link-btn" class="kakao" href="javascript:sendLink();">
                     <img src="image/kakao.png" />
                 </a>
-                <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4da6b782b75e71782665fd87e3e8ebf9">
-                    Kakao.init('4da6b782b75e71782665fd87e3e8ebf9');
+                <script type="text/javascript">
                     function sendLink() {
-                        Kakao.Link.sendDefault({
-                            objectType: 'feed',
-                            content: {
-                                title: 'hsu mbti',
-                                description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-                                imageUrl:
-                                    'image/kakao.png',
-                                link: {
-                                    mobileWebUrl: 'https://charming-bavarois-f6d44e.netlify.app',
-                                    webUrl: 'https://charming-bavarois-f6d44e.netlify.app',
-                                },
+                      Kakao.Link.sendDefault({
+                        objectType: 'feed',
+                        content: {
+                          title: '딸기 치즈 케익',
+                          description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+                          imageUrl:
+                            'http://k.kakaocdn.net/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+                          link: {
+                            mobileWebUrl: 'https://developers.kakao.com',
+                            webUrl: 'https://developers.kakao.com',
+                          },
+                        },
+                        social: {
+                          likeCount: 286,
+                          commentCount: 45,
+                          sharedCount: 845,
+                        },
+                        buttons: [
+                          {
+                            title: '웹으로 보기',
+                            link: {
+                              mobileWebUrl: 'https://developers.kakao.com',
+                              webUrl: 'https://developers.kakao.com',
                             },
-                            social: {
-                                likeCount: 286,
-                                commentCount: 45,
-                                sharedCount: 845,
+                          },
+                          {
+                            title: '앱으로 보기',
+                            link: {
+                              mobileWebUrl: 'https://developers.kakao.com',
+                              webUrl: 'https://developers.kakao.com',
                             },
-                            buttons: [
-                                {
-                                    title: "웹으로 보기",
-                                    link: {
-                                        webUrl: window.location.href
-                                    }
-                                }
-                            ]
-                        })
+                          },
+                        ],
+                      })
                     }
-                </script>
+                  </script>
             </div>
         </article>
         <footer class = "copyright">
