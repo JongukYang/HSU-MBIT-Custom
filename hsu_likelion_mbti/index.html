@@ -111,9 +111,9 @@
                 <a id="kakao-link-btn" class="kakao" href="javascript:sendLink()">
                     <img src="image/kakao.png" />
                 </a>
-                <script type="text/javascript" src="//https://dapi.kakao.com/v2/maps/sdk.js?appkey=4da6b782b75e71782665fd87e3e8ebf9">
+                <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=4da6b782b75e71782665fd87e3e8ebf9">
+                    Kakao.init('4da6b782b75e71782665fd87e3e8ebf9');
                     function sendLink() {
-                        // Kakao.init('4da6b782b75e71782665fd87e3e8ebf9');
                         Kakao.Link.sendDefault({
                             objectType: 'feed',
                             content: {
