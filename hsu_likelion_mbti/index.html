@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <title>complete?</title>
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dis/web/static/pretendard-dynamic-subset.css">
+    <meta property="og:image" content="image/thumbnail.png">
+    <meta property="og:title" content="HSU-LikeLion-MBTI">
+    <meta property="og:description" content="한성대학교 멋쟁이사자처럼 10기가 제작한 MBTI 유형테스트입니다.">
+    <meta property="og:type" content="website">
+
+    <title>hsu-likelion-mbti</title>
     <link rel="stylesheet" href="style.css">
+
     <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 
@@ -45,17 +48,22 @@
                 <div class="title2">상상부기 프렌즈는?</div>
                 <div class="progress-number">1/20</div>
 
-                <div id="myProgress">
-                    <div id="myBar"></div>
-                    <div class="progress-bar-image"></div>
+                <div class="progress-box">
+                    <div id="myProgress">
+                        <div id="myBar"></div>
+                        <div class="progress-bar-image"></div>
+                    </div>
+
                 </div>
+
 
                 <div class="problem">문제</div>
 
                 <input id="type" type="hidden" value="EI">
-
-                <button id="A" type="button" class="answer-button"><span class="answer-content">content</span></button>
-                <button id="B" type="button" class="answer-button"><span class="answer-content">content</span></button>
+                <div class="answer-button-box"><button id="A" type="button" class="answer-button"><span
+                            class="answer-content">content</span></button></div>
+                <div class="answer-button-box"><button id="B" type="button" class="answer-button"><span
+                            class="answer-content">content</span></button></div>
             </article>
         </div>
 
@@ -74,7 +82,7 @@
 
                 <div class="result-mbti">#INFP</div>
                 <div class="result-detail">&lt; 특징 &gt;</div>
-                <div class="result-detail-content">사교적이고, 타인의 의견을 존중 뭐시기</div>
+                <p class="result-detail-content">사교적이고, 타인의 의견을 존중 뭐시기</p>
 
                 <div class="favorite">&lt; 나는 이게 <span style="color :#124098">좋아</span>! &gt;</div>
                 <div class="favorite-content">정성스러운 칭찬</div>
@@ -118,40 +126,9 @@
                     공유하기
                 </div>
                 <div class="share-image-box">
-                    <img class="insta" src="image/insta.png">
-                    <img class="kakao" src="image/kakao.png">
-                    <img class="linkcopy" src="image/linkcopy.png">
-                    <script type="text/javascript">
-                        Kakao.init('c0a6e223aa1c2739a6d6910ef881e432');
-                        function sendLink() {
-                            Kakao.Link.sendDefault({
-                                objectType: 'feed',
-                                content: {
-                                    title: '나와 닮은 상상부기 프렌즈는?',
-                                    description: '#MBTI #상상부기 #한성냥이 #꼬꼬꾸꾸 #상찌 # #HSU #멋사 #운영진수고했다',
-                                    imageUrl:
-                                        'https://github.com/JongukYang/HSU-MBIT-Custom/blob/main/hsu_likelion_mbti/image/thumbnail2.png',
-                                    link: {
-                                        mobileWebUrl: 'https://tranquil-jelly-b78390.netlify.app',
-                                        webUrl: 'https://tranquil-jelly-b78390.netlify.app',
-                                    },
-                                },
-                                buttons: [
-                                    {
-                                        title: '테스트 하러가기!!',
-                                        link: {
-                                            mobileWebUrl: 'https://tranquil-jelly-b78390.netlify.app',
-                                            webUrl: 'https://tranquil-jelly-b78390.netlify.app',
-                                        },
-                                    },
-                                ],
-                            })
-                        }
-                    </script>
-                    <a id="kakao-link-btn" class="kakao" href="javascript:sendLink();">
-                        <img src="image/kakao.png" />
-                    </a>
-
+                    <img class="insta" src="image/facebook.png" onclick="shareFacebook()">
+                    <img class="kakao" src="image/kakao.png" onclick="sendLink()">
+                    <img class="linkcopy" src="image/linkcopy.png" onclick="clip()">
                 </div>
             </article>
             <footer class="copyright">
@@ -203,23 +180,70 @@
         var index = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
         var result = {
-            "ESFP": { "favoirte": "", "dislike": "", "char": "상상부기", "name": "ESTP", "title": "노는게 제일 좋아 ", "subtitle": "동해번쩍 서해번쩍", "explain": "하마 설명", "img": "image/mbti/esfp.png" },
-            "ESFJ": { "favoirte": "", "dislike": "", "char": "상상부기", "name": "ESFJ", "title": "슈퍼핵인싸 ", "subtitle": "친구 사귀는게 제일 쉬웠어요", "explain": "하마 설명", "img": "image/mbti/esfj.png" },
-            "ESTP": { "favoirte": "", "dislike": "", "char": "꼬꼬꾸꾸", "name": "ESTP", "title": "내일은 없어 ", "subtitle": "일단 하고 보자고 !!!", "explain": "하마 설명", "img": "image/mbti/estp.png" },
-            "ESTJ": { "favoirte": "", "dislike": "", "char": "꼬꼬꾸꾸", "name": "ESTJ", "title": "멋쟁이 워커홀릭 ", "subtitle": "계획은 지키라고 있는거죠", "explain": "하마 설명", "img": "image/mbti/estj.png" },
-            "ENFP": { "favoirte": "", "dislike": "", "char": "상상부기", "name": "ENFP", "title": "댕댕이 탈을 쓴 ", "subtitle": "365일 저세상 텐션", "explain": "하마 설명", "img": "image/mbti/enfp.png" },
-            "ENFJ": { "favoirte": "", "dislike": "", "char": "상상부기", "name": "ENFJ", "title": "긍정파워 전도사 ", "subtitle": "나의 해피바이러스를 받아라 ~!", "explain": "하마 설명", "img": "image/mbti/enfj.png" },
-            "ENTP": { "favoirte": "", "dislike": "", "char": "꼬꼬꾸꾸", "name": "ENTP", "title": "노브레이크 ", "subtitle": "빠꾸없는 자유로운 영혼", "explain": "하마 설명", "img": "image/mbti/entp.png" },
-            "ENTJ": { "favoirte": "", "dislike": "", "char": "꼬꼬꾸꾸", "name": "ENTJ", "title": "조별과제 버스담당 ", "subtitle": "극극극한의 효율쟁이", "explain": "하마 설명", "img": "image/mbti/entj.png" },
-            "ISFP": { "favoirte": "", "dislike": "", "char": "상찌", "name": "ISFP", "title": "집돌이 집순이 ", "subtitle": "역시 집이 최고야♡", "explain": "하마 설명", "img": "image/mbti/isfp.png" },
-            "ISFJ": { "favoirte": "", "dislike": "", "char": "한성냥이", "name": "ISFJ", "title": "맑은 영혼 ", "subtitle": "내가 바로 한성대의 나이팅게일", "explain": "하마 설명", "img": "image/mbti/isfj.png" },
+            "ESFP": { "favoirte": "프렌즈들과의 파티", "dislike": "", "char": "상상부기", "name": "ESTP", "title": "노는게 제일 좋아 ", "subtitle": "동해번쩍 서해번쩍", "explain": "노는게 제일 좋은 상상부기는 꽤나 단순하고 열정적이에요. 쉬는 날에도 프렌즈들과 놀고 프렌즈들의 친구도 자신의 친구라고 생각하기 때문에 발이 아주 넓어요. 한성대에서 부기를 모르는 사람이 없을 정도랍니다! 어떤 자리에 가도 부기를 만날 수 있을 정도로 노는 것을 좋아하는 부기는 사실은 나가기 전 까진 꽤나 귀찮아하는 편이에요. <br>부기는 즉흥적이고 성격이 급해서 섣불리 일을 시작하는 경우가 많답니다. 그렇다고 걱정이 없는 건 아니에요, 다만 그 걱정은 미래의 자신에게 맡길 뿐... ", "img": "image/mbti/esfp.png" },
+            "ESFJ": { "favoirte": "인정받는게 좋아요", "dislike": "", "char": "상상부기", "name": "ESFJ", "title": "슈퍼핵인싸 ", "subtitle": "친구 사귀는게 제일 쉬웠어요", "explain": "슈퍼핵인싸 상상부기는 프렌즈들에게 관심도 많고 정이 아주 많아 모두를 잘 챙긴답니다. 어쩔 땐 자신보다도 남을 더 챙기고 은근히 상처도 잘 받아요. 어색한 분위기를 싫어하는 부기는 먼저 말을 걸어주기 때문에 새로운 친구를 잘 사귀고 사회생활을 잘 한다는 얘기도 많이 들어요. 누구에게나 자상하고 스윗한 부기는 감성적이라 눈물을 잘 흘린답니다. <br>일어나지 않은 일에대한 걱정이 조금 있는 편이라 어릴 적 부터 함께한 가족과 프렌즈들에겐 잔소리가 있는 편이에요. 부기가 잔소리를 시작하면 상찌는 등껍질 가방에 숨는답니다.", "img": "image/mbti/esfj.png" },
+            "ESTP": { "favoirte": "똑똑하단 말이 좋아요", "dislike": "", "char": "꼬꼬꾸꾸", "name": "ESTP", "title": "내일은 없어 ", "subtitle": "일단 하고 보자고 !!!", "explain": "내일은 없어 꼬꼬꾸꾸는 재미를 우선으로 생각하고 즉흥적이에요. 그렇기 때문에 내기, 번개만남을 좋아해요.  문제 해결에 있어서는 누구보다 이성적이고 현실적이지만 자신이 하고 싶은 일에 있어서는 자신의 상황보단 자신이 하고 싶은 일이 먼저에요. 도전적이고 주장도 강한 편이기 때문에 프렌즈들의 걱정에도 해야할 일을 일단 미뤄버리고 막무가내로 저질러 버릴 때가 많아요. 타고 있는 스포츠카도 충동구매의 산물이랍니다.. (상상부기에게 엄청 혼났다는..) <br>다행히(?) 다소 충동적인 행동에 비해 해야할 일은 어떻게든 해내긴 하기 때문에 스스로에 대한 자신감이 넘칩니다. ", "img": "image/mbti/estp.png" },
+            "ESTJ": { "favoirte": "일 잘한다는 말이 제일 짜릿해", "dislike": "", "char": "꼬꼬꾸꾸", "name": "ESTJ", "title": "멋쟁이 워커홀릭 ", "subtitle": "계획은 지키라고 있는거죠", "explain": "멋쟁이 워커홀릭 꼬꼬꾸꾸는 어떤 일이든 정확하고 꼼꼼하게 해내요. 자신이 세운 계획을 완벽하게 해내야 한다는 생각이 아주 강해요. 꼬꼬꾸꾸는 현실적이고 이성적이기 때문에 자신과 다른 프렌즈들에게 잔소리를 많이 하는 편이에요. 프렌즈들은 꼬꼬꾸꾸의 뼈 때리는 잔소리에 점점 순살프렌즈가 되어가고 있답니다.. 뭐든 객관적으로 바라보기에 프렌즈들의 고민에 정신적 지지보단 현실적 조언을 해주는 편이에요. <br>여유가 생기면 안주하지 않고 일을 찾아서 하는 성격이라 항상 바빠요. 약간은 딱딱해 보이는 꼬꼬꾸꾸지만 사실은 그 누구보다 프렌즈들을 아끼고 좋아한답니다. ", "img": "image/mbti/estj.png" },
+            "ENFP": { "favoirte": "새로운 친구 사귀기", "dislike": "", "char": "상상부기", "name": "ENFP", "title": "댕댕이 탈을 쓴 ", "subtitle": "365일 저세상 텐션", "explain": "댕댕이 탈을 쓴 상상부기는 친구들이 너무 좋아요! 처음 만나는 사람들도 다 부기의 친구가 돼요!  정문부터 잔디광장까지 인사하느라 바쁜 부기랍니다. 관심을 받는것도 관심을 주는것도 좋아요. 모두가 부기는 항상 신나보인다 얘기하지만, 사실은 예민하고 감성적이랍니다. <br>혼자있는 시간도 너무 중요해요. 그리고 이건 비밀인데요, 댕댕이 탈을 쓴 상상부기가 생각하는 진정한 친구는 생각보다 많지 않아요. ", "img": "image/mbti/enfp.png" },
+            "ENFJ": { "favoirte": "믿음직스럽다는 말 <br>프렌즈들의 신뢰", "dislike": "", "char": "상상부기", "name": "ENFJ", "title": "긍정파워 전도사 ", "subtitle": "나의 해피바이러스를 받아라 ~!", "explain": "긍정파워 전도사 상상부기는 친구들의 의견을 긍정적으로 받아들이고 눈치도 빨라요. 그래서 꼬꼬와 꾸꾸가 싸울 때 마다 빠르게 등껍질 가방에서 큐피트 화살을 꺼내서 중재해준답니다! <br> 조언도 아주 잘해주어서 프렌즈들의 신뢰를 한 몸에 받아요. 프렌즈들의 부기를 향한 신뢰에서 살아있음을 느끼는 유형이랍니다. 언제나 밝고 씩씩해보이는 부기지만, 공감을 잘해주는 만큼 사실은 상처도 잘 받아요. ", "img": "image/mbti/enfj.png" },
+            "ENTP": { "favoirte": "너가 제일 재밌어", "dislike": "", "char": "꼬꼬꾸꾸", "name": "ENTP", "title": "노브레이크 ", "subtitle": "빠꾸없는 자유로운 영혼", "explain": "노브레이크 꼬꼬꾸꾸는 끊임없는 아이디어와 함께 새로운 시도를 합니다.인생은 '재미'라고 생각하기 때문에 하고 싶은게 생기면 즉흥적으로 실행해요. 꼬꼬꾸꾸는 솔직하고 입담이 좋아 프렌즈들에게 항상 새로운 재미를 선사해주기 때문에 인기가 아주 많아요. 다만 솔직한만큼 자신의 의견을 직설적이고 강하게 내새워 자신도 모르게 프렌즈들의 감정을 상하게 할 때도 있어요.<br>어릴 적 부터 어디로 튈지 모르는 행동을 하던 꼬꼬꾸꾸이기 때문에 꼬꼬꾸꾸의 프렌즈들은 한 번씩은 부모님께 꼬꼬꾸꾸와 놀면 안된다는 소리를 들어보았답니다. 하지만 프렌즈들의 우정은 변치않아요♡", "img": "image/mbti/entp.png" },
+            "ENTJ": { "favoirte": "결과물에 대한 칭찬", "dislike": "", "char": "꼬꼬꾸꾸", "name": "ENTJ", "title": "조별과제 버스담당 ", "subtitle": "극극극한의 효율쟁이", "explain": "조별과제 버스담당 꼬꼬꾸꾸는  끈기와 책임감이 뛰어나요. 비효율적이고 답답한 걸 싫어해서 맡은 일을 빠르고 정확하게 끝낸답니다. 먼저 나서서 이끄는 것을 좋아하진 않지만, 프렌즈들에게 맡기는 것보단 자신이 하는 것이 낫다고 생각해요. <br> 정신차리면 조장이 돼있는 꼬꼬꾸꾸에요. 논리적이고 카리스마 넘쳐보이지만 사실은 상상력도 풍부하고 은근히 관심 받는 것도 즐긴답니다. ", "img": "image/mbti/entj.png" },
+            "ISFP": { "favoirte": "적당한 관심은 꽤나.. 좋은 것 같기도..", "dislike": "갑자기 전화하는거 싫어요.. 용건은 텍스트로..", "char": "상찌", "name": "ISFP", "title": "집돌이 집순이 ", "subtitle": "역시 집이 최고야♡", "explain": "집돌이 집순이 상찌는 집이 제일로 좋아요. 하지만 프렌즈들이 어딜 함께 가자고 할 때 거절은 잘 하지 않는 편이에요. 약속이 취소되면 내심 기뻐할 때도 있지만 막상 만나서는 재밌게 놀다 들어갑니다. <br>프렌즈들과 만나기로 하여 외출을 하는 날은 은행, 미용실, 동사무소 등 상찌가 집에 있는 동안 처리하지 못했던 일들을 모두 처리하는 날이에요. 은근히 개그욕심도 있어 프렌즈들 사이에선 상찌 정말 웃기다는 소리를 들어요. 항상 남들의 의견과 부탁을 잘 들어주는 상찌는 착하다는 소릴 많이 듣는데요, 사실은 기분이 상해도 겉으로 티를 안 낼 뿐이지 마음 속에 쌓아두고 있어요. 남들과 불편한 대화를 하느니 상찌 스스로 삭이는게 낫다고 생각하거든요.", "img": "image/mbti/isfp.png" },
+            "ISFJ": { "favoirte": "혼자 노는것도 너무 좋아요", "dislike": "요령 피우는거 싫어요", "char": "한성냥이", "name": "ISFJ", "title": "맑은 영혼 ", "subtitle": "내가 바로 한성대의 나이팅게일", "explain": "맑은 영혼 한성냥이는 프렌즈들 사이에서 가장 차분하고 인내심이 강해요. 프렌즈들의 감정을 잘 파악하기 때문에 공감을 잘해줘요. <br>사려가 깊고 생각도 많은 한성냥이기에 프렌즈들은 고민이 생기면 한성냥이부터 찾아요. 한성냥이도 프렌즈들을 정말 좋아하고 도움을 주고 싶어하기에 한성냥이의 기억력을 총동원하며 최선을 다해 얘기를 들어주어요. 기억력이 좋고 생각이 많은 만큼 약간은 쓸데없는 걱정도 많고 자신에게 엄격하여 사실은 한성냥이도 고민상담이 필요하답니다. 계획을 짜고 메모하는 것을 좋아하는 한성냥이는 자신이 게으르다고 생각하지만 차근차근 계획을 지켜나갑니다.", "img": "image/mbti/isfj.png" },
             "ISTP": { "favoirte": "", "dislike": "", "char": "한성냥이", "name": "ISTP", "title": "침착한 반항아 ", "subtitle": "굳이? 일단은 누워 있을래", "explain": "하마 설명", "img": "image/mbti/istp.png" },
             "ISTJ": { "favoirte": "", "dislike": "", "char": "상찌", "name": "ISTJ", "title": "사실은 있는..! ", "subtitle": "피도 눈물도", "explain": "하마 설명", "img": "image/mbti/istj.png" },
-            "INFP": { "favoirte": "", "dislike": "", "char": "상찌", "name": "INFP", "title": "상처가득 쿠크다스 ", "subtitle": "상상부기가 상추를 먹었어..!", "explain": "하마 설명", "img": "image/mbti/infp.png" },
+            "INFP": { "favoirte": "먼저 말 걸어주세요", "dislike": "", "char": "상찌", "name": "INFP", "title": "상처가득 쿠크다스 ", "subtitle": "상상부기가 상추를 먹었어..!", "explain": "쿠크다스 상찌는 정이 많은 만큼 상처도 잘 받아요. 자신이 상처를 잘 받는만큼 남들도 많이 받을거라 생각해 쓴소리도 못한답니다. 따라서 프렌즈들의 의견을 대부분 받아들이고, 분위기에 잘 맞추는 편이에요. 귀차니즘력이 강한 상찌지만 꽂히는 취미가 생기면 하루종일 그것만 하기도 해요. 프렌즈들과 놀러가기 전까진 귀찮고 부담스럽지만 막상 만나면 행복한 상찌에요. <br>상상력과 창의력이 풍부한 상찌는 요즘 프렌즈들의 초상화를 그려주는 취미에 푹 빠져있답니다. 스스로 엄청 쎈 상찌라고 생각하지만 프렌즈들이 보기엔 작고 소중하기만 한 상찌에요.", "img": "image/mbti/infp.png" },
             "INFJ": { "favoirte": "", "dislike": "", "char": "상찌", "name": "INFJ", "title": "외유내강 ", "subtitle": "건드리면 물거다...", "explain": "하마 설명", "img": "image/mbti/infj.png" },
             "INTP": { "favoirte": "", "dislike": "", "char": "한성냥이", "name": "INTP", "title": "중립기어 두는 ", "subtitle": "\"그럴 수 있지\" X 100", "explain": "하마 설명", "img": "image/mbti/intp.png" },
             "INTJ": { "favoirte": "", "dislike": "", "char": "한성냥이", "name": "INTJ", "title": "무표정의 츤데레 ", "subtitle": "알고보면 한없이 따뜻해요", "explain": "하마 설명", "img": "image/mbti/intj.png" }
         }
+
+
+
+        function shareFacebook() {
+            var sendUrl = "https://hsu-likelion-mbti.netlify.app/"; // 전달할 URL
+            window.open("http://www.facebook.com/sharer/sharer.php?u=" + sendUrl);
+        }
+
+        function clip() {
+
+            var url = 'https://hsu-likelion-mbti.netlify.app/';
+            var textarea = document.createElement("textarea");
+            document.body.appendChild(textarea);
+            /* url = window.document.location.href;*/
+            textarea.value = url;
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            alert("클립보드에 복사되었습니다.")
+        }
+
+        Kakao.init('c0a6e223aa1c2739a6d6910ef881e432');
+        function sendLink() {
+            Kakao.Link.sendDefault({
+                objectType: 'feed',
+                content: {
+                    title: '나와 닮은 상상부기 프렌즈는?',
+                    description: '#MBTI #상상부기 #한성냥이 #꼬꼬꾸꾸 #상찌 # #HSU #멋사 #운영진수고했다',
+                    imageUrl: 'https://github.com/JongukYang/HSU-MBIT-Custom/blob/main/hsu_likelion_mbti/image/thumbnail2.png',
+                    link: {
+                        mobileWebUrl: 'https://tranquil-jelly-b78390.netlify.app',
+                        webUrl: 'https://tranquil-jelly-b78390.netlify.app',
+                    },
+                },
+                buttons: [
+                    {
+                        title: '테스트 하러가기!!',
+                        link: {
+                            mobileWebUrl: 'https://tranquil-jelly-b78390.netlify.app',
+                            webUrl: 'https://tranquil-jelly-b78390.netlify.app',
+                        },
+                    },
+                ],
+            })
+        }
+
+
 
 
         function init() {
@@ -241,71 +265,70 @@
 
         function best_worst(mbti) {
             if (mbti == "ESFP") {
-                best_conn = "ESFP"
-                worst_conn = "INTJ"
+                best_conn = "ISTJ"
+                worst_conn = "ENFJ"
             }
             else if (mbti == "ESTP") {
-                best_conn = "ENTJ"
-                worst_conn = "ISFJ"
-            }
-            else if (mbti == "ESTJ") {
-                best_conn = "ENTJ"
+                best_conn = "ISFJ"
                 worst_conn = "INFP"
             }
             else if (mbti == "ESFJ") {
-                best_conn = "ESFP"
-                worst_conn = "INTP"
+                best_conn = "ISTP"
+                worst_conn = "ENFP"
             }
             else if (mbti == "ENFP") {
-                best_conn = "ENTP"
-                worst_conn = "ISTJ"
+                best_conn = "INTJ"
+                worst_conn = "ISTP"
             }
-            else if (mbti == "ENSP") {
-                best_conn = "INFP"
-                worst_conn = "INTP"
-            }
-            else if (mbti == "ENTJ") {
-                best_conn = "ENTP"
+            else if (mbti == "ENTP") {
+                best_conn = "INFJ"
                 worst_conn = "ISFP"
             }
-
+            else if (mbti == "ENTJ") {
+                best_conn = "INTP"
+                worst_conn = "INFJ"
+            }
+            else if (mbti == "ESTJ") {
+                best_conn = "ISFP"
+                worst_conn = "INFP"
+            }
             else if (mbti == "ENFJ") {
-                best_conn = "INFJ"
-                worst_conn = "ISTJ"
+                best_conn = "INFP"
+                worst_conn = "ISTP"
             }
 
 
             else if (mbti == "ISFP") {
-                best_conn = "ISFP"
-                worst_conn = "ENTJ"
-            }
-            else if (mbti == "ISFJ") {
-                best_conn = "INFJ"
+                best_conn = "ESTJ"
                 worst_conn = "ENTP"
             }
-            else if (mbti == "ISTP") {
+            else if (mbti == "ISFJ") {
                 best_conn = "ESTP"
-                worst_conn = "INTP"
+                worst_conn = "INFP"
+            }
+            else if (mbti == "ISTP") {
+                best_conn = "ESFJ"
+                worst_conn = "ENFP"
             }
             else if (mbti == "ISTJ") {
-                best_conn = "ISFJ"
-                worst_conn = "INFJ"
+                best_conn = "ESFP"
+                worst_conn = "ENFJ"
             }
             else if (mbti == "INFP") {
-                best_conn = "ENFP"
-                worst_conn = "ESTJ"
-            }
-            else if (mbti == "INFJ") {
-                best_conn = "ISFJ"
+                best_conn = "ENFJ"
                 worst_conn = "ESTP"
             }
-            else if (mbti == "INTP") {
+            else if (mbti == "INFJ") {
                 best_conn = "ENTP"
-                worst_conn = "ESFJ"
+                worst_conn = "ESTJ"
+            }
+            else if (mbti == "INTP") {
+                best_conn = "ENTJ"
+                worst_conn = "ESFP"
             }
             else if (mbti == "INTJ") {
-                best_conn = "INTP"
-                worst_conn = "ESFP"
+                best_conn = "ENFP"
+                worst_conn = "ESFJ"
             }
         }
 
@@ -344,9 +367,11 @@
                 $(".result-title").html(result[mbti]["title"] + "<span style = 'color:#124098'>" + result[mbti]["char"] + "</span>"); // 찐 // + result[mbti]["char"]
                 $(".result-mbti").html("#" + result[mbti]["name"]);
                 $("#result-mbti-image").attr("src", result[mbti]["img"]); // 결과 이미지
-                $("#explain").html(result[mbti]["explain"]); // 설명
+                $(".result-detail-content").html(result[mbti]["explain"]); // 설명
 
                 // favorite / dislike
+                $(".favorite-content").html(result[mbti]["favorite"]);
+                $(".dislike-content").html(result[mbti]["dislike"]);
 
                 // best - worst 
                 $("#mbti-best-image").attr("src", result[best_conn]["img"]);
@@ -356,15 +381,16 @@
                 $("#mbti-best-detail").html(result[best_conn]["title"] + "<br/>" + result[best_conn]["char"]);
                 $("#mbti-worst-detail").html(result[worst_conn]["title"] + "<br/>" + result[worst_conn]["char"]);
 
-                // 아래 좋은거 나쁜거 사진 눌렀을 때 변환
                 $("#mbti-best-image").click(function (e) {
                     var convert_mbti = best_conn;
 
                     $(".result-subtitle").html(result[convert_mbti]["subtitle"]); // 서브
                     $(".result-title").html(result[convert_mbti]["title"] + "<span style = 'color:#124098'>" + result[convert_mbti]["char"] + "</span>"); // 찐 // + result[mbti]["char"]
                     $("#result-mbti-image").attr("src", result[convert_mbti]["img"]); // 결과 이미지
-                    $("#explain").html(result[convert_mbti]["explain"]); // 설명
+                    $(".result-detail-content").html(result[convert_mbti]["explain"]); // 설명
                     $(".result-mbti").html("#" + result[convert_mbti]["name"]);
+                    $(".favorite-content").html(result[convert_mbti]["favorite"]);
+                    $(".dislike-content").html(result[convert_mbti]["dislike"]);
 
 
                     best_worst(convert_mbti);
@@ -383,8 +409,10 @@
                     $(".result-subtitle").html(result[convert_mbti]["subtitle"]); // 서브
                     $(".result-title").html(result[convert_mbti]["title"] + "<span style = 'color:#124098'>" + result[convert_mbti]["char"] + "</span>"); // 찐 // + result[mbti]["char"]
                     $("#result-mbti-image").attr("src", result[convert_mbti]["img"]); // 결과 이미지
-                    $("#explain").html(result[convert_mbti]["explain"]); // 설명
+                    $(".result-detail-content").html(result[convert_mbti]["explain"]); // 설명
                     $(".result-mbti").html("#" + result[convert_mbti]["name"]);
+                    $(".favorite-content").html(result[convert_mbti]["favorite"]);
+                    $(".dislike-content").html(result[convert_mbti]["dislike"]);
 
 
                     best_worst(convert_mbti);
