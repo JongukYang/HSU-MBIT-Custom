@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dis/web/static/pretendard-dynamic-subset.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 </head>
 
 <body class="desktop" onload = "init()">
@@ -107,6 +108,40 @@
                 <img class = "insta" src = "image/insta.png">
                 <img class = "kakao" src = "image/kakao.png">
                 <img class = "linkcopy" src = "image/linkcopy.png">
+                <a id="kakao-link-btn" class="kakao" href="javascript:sendLink()">
+                    <img src="image/kakao.png" />
+                </a>
+                <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=4da6b782b75e71782665fd87e3e8ebf9">
+                    function sendLink() {
+                        // Kakao.init('4da6b782b75e71782665fd87e3e8ebf9');
+                        Kakao.Link.sendDefault({
+                            objectType: 'feed',
+                            content: {
+                                title: 'hsu mbti',
+                                description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+                                imageUrl:
+                                    'image/kakao.png',
+                                link: {
+                                    mobileWebUrl: 'https://charming-bavarois-f6d44e.netlify.app',
+                                    webUrl: 'https://charming-bavarois-f6d44e.netlify.app',
+                                },
+                            },
+                            social: {
+                                likeCount: 286,
+                                commentCount: 45,
+                                sharedCount: 845,
+                            },
+                            buttons: [
+                                {
+                                    title: "웹으로 보기",
+                                    link: {
+                                        webUrl: window.location.href
+                                    }
+                                }
+                            ]
+                        })
+                    }
+                </script>
             </div>
         </article>
         <footer class = "copyright">
