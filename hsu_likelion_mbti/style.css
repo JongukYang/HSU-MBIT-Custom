@@ -1,0 +1,514 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css");
+
+@font-face {
+  font-family: "Jalnan";
+  src: url("font/Jalnan.ttf") format("truetype");
+}
+.desktop {
+  width: 100%;
+  height: 100%;
+  flex-grow: 0;
+  padding: 54px 0 0;
+  background-color: #fff;
+}
+
+.wrapper1 {
+  width: 35%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.wrapper2 {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.hsu-logo-box {
+  width: 100%;
+  height: 24px;
+  text-align: center;
+}
+
+.hsu-logo-image {
+  width: 165px;
+  height: 24px;
+  margin: 0 auto;
+}
+
+.title1 {
+  width: 184px;
+  height: 40px;
+  margin: 60px auto 0px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  font-family: Jalnan;
+  font-size: 40px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000;
+}
+
+.title2 {
+  width: 376px;
+  height: 40px;
+  margin: 17px auto 0px;
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25);
+  font-family: Jalnan;
+  font-size: 40px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #124098;
+}
+
+.title2 > .text-style-1 {
+  color: #000;
+}
+
+.subtitle1 {
+  width: 298px;
+  height: 25px;
+  margin: 25px auto;
+  font-family: pretendard;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #446bb3;
+}
+
+.start-image-box {
+  width: 100%;
+  height: 312px;
+  text-align: center;
+}
+.start-img {
+  width: 312px;
+  height: 308px;
+  margin: 0 auto;
+}
+
+.detail {
+  width: 400px;
+  height: 91px;
+  margin: 23px auto;
+  font-family: pretendard;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.detail > .text-style-1 {
+  font-weight: bold;
+}
+
+.button-box {
+  width: 100%;
+  height: 96px;
+  text-align: center;
+}
+.first_button {
+  width: 400px;
+  height: 96px;
+  margin: 34px auto;
+  padding: 36px 113px 35px 112px;
+  border-radius: 50px;
+  background-color: #124098;
+
+  border: none;
+}
+
+.first_button > .text {
+  width: 175px;
+  height: 25px;
+  margin: auto auto;
+  font-family: Jalnan;
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.share_text {
+  width: 400px;
+  height: 22px;
+  margin: 42px auto 0px;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #585858;
+}
+
+.share-image-box {
+  width: 100%;
+  height: 92px;
+  text-align: center;
+}
+.insta {
+  width: 92px;
+  height: 92px;
+  margin: 3px auto 0px;
+}
+
+.kakao {
+  width: 92px;
+  height: 92px;
+  margin: 3px auto 0px;
+}
+
+.linkcopy {
+  width: 92px;
+  height: 92px;
+  margin: 3px auto 0px;
+}
+
+.question > .title1 {
+  width: 232px;
+  height: 27px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  font-family: Jalnan;
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.question > .title2 {
+  width: 232px;
+  height: 27px;
+  margin: 9px auto 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  font-family: Jalnan;
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #124098;
+}
+
+#myProgress {
+  width: 100%;
+  height: 10px;
+  margin: 6px 0px;
+  border-radius: 5px;
+  background-color: #c4c4c4;
+}
+
+#myBar {
+  width: 1%;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #002870;
+
+  margin: 6px 0px 0px;
+}
+.progress-bar-image {
+  background-image: url("image/bar_img.png");
+  background-size: 100% 100%;
+  width: 32px;
+  height: 31px;
+  margin: 0px 0px 32px 31px;
+}
+
+.progress-number {
+  width: 48px;
+  height: 24px;
+  margin: 37px 0px 0px 90%;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #999;
+}
+
+.question > .problem {
+  width: 80%;
+  height: 120px;
+  margin: 94px auto 60px;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.question > .answer-button {
+  width: 100%;
+  height: 96px;
+  margin: 0px auto 34px;
+  padding: 26px 20px;
+  object-fit: contain;
+  border-radius: 50px;
+  box-shadow: 3px 3px 15px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #124098;
+
+  border: none;
+}
+
+.answer-button:hover {
+  background-color: #124098;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+.result {
+  display: none;
+}
+
+.result > .result-subtitle {
+  width: 80%;
+  height: 28px;
+  margin: 30px auto 0px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  font-family: Jalnan;
+  font-size: 25px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.result > .result-title {
+  width: 90%;
+  height: 40px;
+  margin: 11px auto 0px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  font-family: Jalnan;
+  font-size: 36px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #446bb3;
+}
+
+.result > .result-mbti-image-box {
+  width: 100%;
+  height: 309px;
+  text-align: center;
+}
+.result-mbti-image-box > #result-mbti-image {
+  width: 324px;
+  height: 309px;
+  margin: 0 auto;
+}
+
+.result > .result-mbti {
+  width: 100%;
+  height: 20px;
+  margin: 28px auto 0px;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #446bb3;
+}
+
+.result > .result-detail {
+  width: 100%;
+  height: 24px;
+  margin: 46px auto 0px;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.result > .result-detail-content {
+  width: 100%;
+  height: 54px;
+  margin: 8px auto 0px;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.result > .favorite {
+  width: 100%;
+  height: 24px;
+  margin: 26px auto 0px;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.result > .favorite-content {
+  width: 100%;
+  height: 24px;
+  margin: 8px auto 0px;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.result > .dislike {
+  width: 100%;
+  height: 24px;
+  margin: 26px auto 0px;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: 800;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.75;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.result > .dislike-content {
+  width: 100%;
+  height: 24px;
+  margin: 8px auto 0px;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333;
+}
+
+.result > .mbti-best-worst-wrapper {
+  width: 100%;
+  height: 228px;
+  margin: 58px auto 0px;
+  text-align: center;
+}
+
+.mbti-best-worst {
+  width: 100%;
+  height: 28px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  font-family: Jalnan;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #333;
+}
+
+.mbti-best-worst-detail {
+  width: 100%;
+  height: 40px;
+  font-family: Jalnan;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: center;
+  color: #555;
+}
+
+.mbti-best-worst-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.copyright {
+  margin: 30px auto 0px;
+  text-align: center;
+}
+
+footer > .copyright-logo {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 26px;
+  margin: 0px auto;
+  object-fit: contain;
+  
+}
